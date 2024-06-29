@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('fonts/Inter/Inter-VariableFont_slnt\,wght.ttf') format('truetype');
+    font-style: normal;
+}
+
+
+:root {
+    /* Colors */
+    --primary : #00163E;
+    --secondary : #fff;
+    --bg-color : #F1FBFE;
+    --orange : #FF5D17;
+    --red : #ff0000;
+    --black : #000;
+    --text-color : #5C5C5C;
+    --text-bg : rgb(146, 165, 179);
+
+    /* Font Family */
+    --inter : 'Inter', sans-serif; 
+
+}

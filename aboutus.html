@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+    :root {
+        --primary : #174767;
+        --primary-light : #19547a;
+
+        --black : #000;
+        --white : #fff;
+        --grey-white : #dcdcdc;
+        --light-grey : rgb(255, 255, 255, 0.3);
+        --grey : #1b1b1b;
+    }
+
+    body {
+        background-color: var(--primary);
+    }
+
+    /* CSS for the About Us page */
+    .about-us {
+        font-family: 'Poppins', sans-serif;
+
+        .introduction .container .heading {
+            font-variant: small-caps;
+            font-size: 3em;
+            /* background-color: var(--grey-white); */
+            color: var(--white);
+            margin-bottom: 4vh;
+        }
+
+        .heading {
+            color: var(--white);
+        }
+
+        .p {
+            /* color: var(--primary-light); */
+        }
+    }
+    .about-us .heading,
+    .about-us p,
+    .about-us blockquote p,
+    .about-us ul li {
+        text-transform: capitalize;
+    }
+
+    /* Container styling for uniform padding and margin */
+    .container {
+        padding: 20px;
+        margin: 0 auto;
+        max-width: 1000px;
+    }
+
+    /* Heading styling for consistent appearance */
+    .about-us .heading {
+        font-size: 2em;
+        margin-bottom: 0px;
+        text-align: center;
+    }
+
+    /* Paragraph and list styling for readability */
+    .about-us p,
+    .about-us ul li {
+        font-size: 1.2em;
+        line-height: 1.5em;
+        margin-bottom: 20px;
+        color: var(--grey-white);
+    }
+
+    /* Blockquote styling for emphasis */
+    .about-us blockquote {
+        font-size: 1.1em;
+        font-style: italic;
+        margin: 20px 0;
+        padding: 10px 20px;
+        border-left: 5px solid #ccc;
+        background-color: #f9f9f9;
+
+        .p {
+            color: var(--grey) !important;
+        }
+    }
+
+    .about-us blockquote footer {
+        text-align: right;
+        font-size: 0.9em;
+        font-style: normal;
+        color: #666;
+    }
+
+    /* List styling for clear presentation */
+    .about-us ul {
+        padding-left: 20px;
+    }
+
+    .about-us ul li {
+        list-style-type: disc;
+    }
+
+</style>
+
+
+</head>
+<body>
+    <div class="about-us">
+        <section class="introduction">
+            <div class="container">
+                <h1 class="heading">About Us</h1>
+                <p class="p">We love helping businesses attract and retain loyal customers through exceptional hospitality principles. With over 30 years of experience in high-end hospitality, luxury services, and traditional household management, our mission is to provide businesses with the tools and training to create engaging and influential experiences for their clientele.</p>
+            </div>
+        </section>
+        <section class="founder">
+            <div class="container">
+                <h2 class="heading">Our Founder</h2>
+                <blockquote>
+                    <p class="p">"I found my purpose in this life: To serve; throughout our life, we are all serving one or the other. Our lives are determined by how much it makes us or others joyful.”</p>
+                    <footer>— Prem Anand</footer>
+                </blockquote>
+                <p class="p">I founded The London Butler Academy to make the Butler education accessible and affordable to all the serving hearts. To make this education of a selected few, to any business that is serving people and is serious about their legacy.</p>
+                <p class="p">I endeavour to transform the experiences of your clients to wow, through a tried and tested framework. I have a background in managing stately homes and country houses and serving high-net-worth families. Having successfully established and run a business in the UK and Switzerland, I bring first-hand knowledge and experience to every project. I am humbled to have had the privilege of transforming people, properties and projects.</p>
+            </div>
+        </section>
+        <section class="philosophy">
+            <div class="container">
+                <h2 class="heading">Our Philosophy</h2>
+                <p class="p">We are guided by integrity in what we do and commitment to our client's success.</p>
+                <blockquote>
+                    <p class="p">“Every business is unique; one size does not fit all. Our ability to provide a bespoke solution that is growth- and sustainability-friendly for the client will decide our future”.</p>
+                    <footer>— Prem Anand</footer>
+                </blockquote>
+            </div>
+        </section>
+        <section class="services">
+            <div class="container">
+                <h2 class="heading">Our Services</h2>
+                <ul class="ul">
+                    <li>Business Consulting: Expert advice on implementing luxury hospitality strategies that resonate with your brand and attract loyal customers.</li>
+                    <li>Hospitality Training and Coaching: Tailored training programs for luxury establishments, hotels, and business staff to enhance service experiences and customer interactions.</li>
+                    <li>Hospitality professionals - One-to-one coaching to maximise their earnings.</li>
+                    <li>Household management systems and Butler Training: High net worth household management systems consulting and staff coaching.</li>
+                </ul>
+            </div>
+        </section>
+        <section class="why-choose-us">
+            <div class="container">
+                <h2 class="heading">Why Choose Us?</h2>
+                <ul class="ul">
+                    <li>Experience: Decades of experience with an excellent referral in high-end hospitality and luxury services.</li>
+                    <li>Expertise: In-depth knowledge of hospitality principles and their application in various settings.</li>
+                    <li>Commitment: A dedicated focus on transforming customer experiences and driving business success.</li>
+                </ul>
+            </div>
+        </section>
+        <section class="promise">
+            <div class="container">
+                <h2 class="heading">My Promise</h2>
+                <p class="p">I devote my time and energy to knowing You and Your clients’ challenges. I sincerely care for your outcome. I see myself as your partner who endeavours to be by your side. I will add value and clarify how to solve your issues. Together, we will implement ways and methods for your business to thrive. I will be with you until you evolve and grow, and we find a solution if you play by what it deserves.</p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
+
