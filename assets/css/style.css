@@ -58,15 +58,28 @@ nav {
 }
 
 .nav-links a {
-    color: var(--secondary);
+    color: var(--text-bg);
     text-decoration: none;
     padding: 5px 10px;
+    font-weight: 600;
     transition: background-color 0.3s;
+    display: block;
 }
 
 .nav-links a:hover {
-    background-color: #575757;
+    /* background-color: var(); */
+    color: var(--white);
     border-radius: 4px;
+}
+.nav-links .active {
+    color: var(--secondary);
+}
+.nav-links a.active::after {
+    content: '•';
+    color: var(--orange); /* Change the color as needed */
+    margin-left: 2px; /* Adjust the spacing as needed */
+    font-size: 0.6em; /* Adjust the size as needed */
+    vertical-align:bottom; /* Aligns the dot with the text baseline */
 }
 
 /* Global Class */
@@ -190,18 +203,43 @@ section {
             position: relative;
             /* background-color: red;   */
             width: 40%;
+            height: 100%;
+            display: flex;
+            align-items: center;
             
             .content {
                 display: flex;
                 flex-direction: column;
+                height: 90%;
+                width: 60%;
                 justify-items: center;
-                justify-content: center !important;
+                justify-content: start;
 
                 .h1{
                     padding: 4vh 0px;
-                    line-height: 5vh;
+                    line-height: 3.2vw;
+                    font-weight: 800;
                     font-size: clamp(45px, 10vh, 30px);
-                    color: var(--primary);
+                    color: var(--blue);
+                }
+
+                .p {
+                    /* width: 80%; */
+                    line-height: 2vw;
+                    font-size: clamp(16px, 10vh, 20px);
+                    color: var(--text-color);
+                }
+
+                .more {
+                    color: var(--orange);
+                    padding-top: 2vw;
+                    font-weight: 600;
+                    text-decoration: none;
+
+                    .bx {
+                        font-size: 20px;
+                        color: var(--orange) !important;
+                    }
                 }
             }
         }
