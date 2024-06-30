@@ -67,19 +67,26 @@
                 <i class="fas fa-bars-staggered" style="color: white;"></i>
             </div>
             <ul class="nav-links" id="navLinks">
-                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#home" targte="#home" class="active">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
+                <li><a href="#services" target="#services">Services</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Hero Section -->
+    <div id="home"></div>
     <section class="hero-section">
         <div class="content">
             <div class="left">
                 <div class="content">
+                    <div class="responsive-image">
+                        <div class="img">
+                            <img src="./assets/hero-mobile-image.jpg" alt="Hero Image" class="img">
+                            <div class="dot"></div>
+                        </div>
+                    </div>
                     <h1 class="h1">Karthik <br> Guggilapu<span>.</span></h1>
                     <hr class="line">
                     <div class="icons">
@@ -134,6 +141,7 @@
         </div>
     </section>
 
+    <div id="services"></div>
     <section class="services">
         <div class="index">Services</div>
         <div class="title">
@@ -199,6 +207,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js" integrity="sha512-u3fPA7V8qQmhBPNT5quvaXVa1mnnLSXUep5PS1qo5NRzHwG19aHmNJnj1Q8hpA/nBWZtZD4r4AX6YOt5ynLN2g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- <script src="assets/js/scripts.js"></script> -->
 
+
+    <script>
+         function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+    
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const navLinks = document.querySelectorAll('.nav-links a');
@@ -210,11 +226,6 @@
                 });
             });
         });
-
-        function toggleMenu() {
-            const navLinks = document.getElementById('navLinks');
-            navLinks.classList.toggle('active');
-        }
     </script>
 
 </body>

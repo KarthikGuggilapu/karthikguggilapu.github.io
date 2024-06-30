@@ -5,6 +5,7 @@
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 body {
     font-family: var(--inter);
@@ -133,10 +134,14 @@ section {
                 flex-direction: column;
                 justify-content: space-evenly;
 
+                .responsive-image {
+                    display: none;
+                }
+
                 .h1{
                     padding: 4vh 0px;
                     line-height: 8vh;
-                    font-size: clamp(65px, 10vh, 30px);
+                    font-size: clamp(55px, 10vh, 30px);
                     color: var(--secondary);
                 }
     
@@ -237,14 +242,14 @@ section {
                     padding: 4vh 0px;
                     line-height: 3.2vw;
                     font-weight: 800;
-                    font-size: clamp(45px, 10vh, 30px);
+                    font-size: clamp(30px, 10vh, 30px);
                     color: var(--blue);
                 }
 
                 .p {
                     /* width: 80%; */
                     line-height: 2vw;
-                    font-size: clamp(16px, 10vh, 20px);
+                    font-size: clamp(16px, 10vh, 18px);
                     color: var(--text-color);
                 }
 
@@ -264,57 +269,7 @@ section {
     }
 }
 
-/* Quote Section Bar*/
-.bar {
-    border-top: 1px solid var(--grey-white);
-    width: 100%;
-    padding: 3vw 5vw;
-    background-color: var(--primary);
-    color: var(--white);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    .context {
-        max-width: 80%;
-        padding: 20px;
-        border-left: 5px solid var(--text-color);
-        font-style: italic;
-        font-family: 'Georgia', serif;
-        position: relative;
-    }
-
-    .quote {
-        quotes: "“" "”" "‘" "’";
-        font-size: clamp(1.3em, 5vw, 1.3em);
-        line-height: 2vw;
-        color: var(--secondary);
-    }
-    .quote::before {
-        content: open-quote;
-        font-size: clamp(3em, 5vw, 3em);
-        line-height: 0.1em;
-        margin-right: 0.1em;
-        vertical-align: -0.4em;
-        color: var(--orange);
-    }
-    .quote::after {
-        content: close-quote;
-        font-size: clamp(3em, 5vw, 3em);
-        line-height: 0.1em;
-        margin-left: 0.1em;
-        vertical-align: -0.4em;
-        color: var(--orange)
-    }
-    .author {
-        text-align: right;
-        margin-top: 10px;
-        font-style: normal;
-        font-weight: bold;
-        color: var(--text-bg);
-    }
-}
-
+/* Services */
 .services {
     text-align: center;
     border-top: 2vh solid var(--primary);
@@ -332,7 +287,7 @@ section {
 
     .title {
         padding: 2vh 0px;
-        font-size: clamp(24px, 5vw, 26px);
+        font-size: clamp(18px, 5vw, 26px);
         color: var(--blue);
     }
     .context {
@@ -340,7 +295,7 @@ section {
         margin: 0 auto;
         width: 60%;
         color: var(--text-color);
-        font-size: clamp(16px, 5vw, 18px);
+        font-size: clamp(16px, 5vw, 16px);
         font-weight: 500;
         line-height: 1.8vw;
     }
@@ -349,6 +304,7 @@ section {
         margin: 0 auto;
         padding: 2vw 0px;
         display: flex;
+        flex-wrap: wrap;
 
 
         .col {
@@ -387,9 +343,57 @@ section {
             width: 25%;
         }
 
-        .col-50 {
-            width: 50%;
-        }
+    }
+}
+
+/* Quote Section Bar*/
+.bar {
+    border-top: 1px solid var(--grey-white);
+    width: 100%;
+    padding: 3vw 5vw;
+    background-color: var(--primary);
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .context {
+        max-width: 80%;
+        padding: 20px;
+        border-left: 5px solid var(--text-color);
+        font-style: italic;
+        font-family: 'Georgia', serif;
+        position: relative;
+    }
+
+    .quote {
+        quotes: "“" "”" "‘" "’";
+        font-size: clamp(14px, 5vw, 1.3em);
+        line-height: 2vw;
+        color: var(--secondary);
+    }
+    .quote::before {
+        content: open-quote;
+        font-size: clamp(2.5em, 5vw, 3em);
+        line-height: 0.1em;
+        margin-right: 0.1em;
+        vertical-align: -0.4em;
+        color: var(--orange);
+    }
+    .quote::after {
+        content: close-quote;
+        font-size: clamp(2.5em, 5vw, 3em);
+        line-height: 0.1em;
+        margin-left: 0.1em;
+        vertical-align: -0.4em;
+        color: var(--orange)
+    }
+    .author {
+        text-align: right;
+        margin-top: 10px;
+        font-style: normal;
+        font-weight: bold;
+        color: var(--text-bg);
     }
 }
 
