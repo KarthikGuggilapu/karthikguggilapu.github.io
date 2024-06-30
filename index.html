@@ -135,9 +135,60 @@
     </section>
 
     <section class="services">
-        <h1>Services</h1>
+        <div class="index">Services</div>
+        <div class="title">
+            <h2>What I Am Great At</h2>
+        </div>
+        <div class="context">
+            <p>
+                I excel in full stack development, crafting intuitive UI/UX designs, efficient prototyping, robust back-end solutions, and seamless database management. My adaptability and dedication ensure high-quality, timely project delivery.
+            </p>
+        </div>
+
+        <div class="row">
+            <div class="col col-50 col-25">
+                <div class="s-card">
+                    <i class='bx bxs-vector'></i>
+                    <h4>UI/UX Design</h4>
+                    <h6>10 Designs</h6>
+                </div>
+            </div>
+            <div class="col col-50 col-25">
+                <div class="s-card">
+                    <i class='bx bx-code-alt'></i>
+                    <h4>Web Development</h4>
+                    <h6>15+ Projects</h6>
+                </div>
+            </div>
+            <div class="col col-50 col-25">
+                <div class="s-card">
+                    <i class='bx bx-mobile-alt'></i>
+                    <h4>App Development</h4>
+                    <h6>5 Projects</h6>
+                </div>
+            </div>
+            <div class="col col-50 col-25">
+                <div class="s-card">
+                    <i class='bx bx-search-alt' ></i>
+                    <h4>Web Research</h4>
+                    <h6>100+ Searches</h6>
+                </div>
+            </div>
+        </div>
     </section>
 
+    <!-- Quote Section -->
+    <section class="bar">
+        <div class="context">
+            <div class="quote">
+                Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work. And the only way to do great work is to love what you do.
+            </div>
+            <div class="author">
+                — Steve Jobs
+            </div>
+        </div>
+    </section>
+    hello
 
     <!-- Footer -->
     <footer>
@@ -149,9 +200,20 @@
     <!-- <script src="assets/js/scripts.js"></script> -->
 
     <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('.nav-links a');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    navLinks.forEach(link => link.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+        });
+
         function toggleMenu() {
             const navLinks = document.getElementById('navLinks');
-            navLinks.classList.toggle('show');
+            navLinks.classList.toggle('active');
         }
     </script>
 
