@@ -627,7 +627,7 @@
             <h3 class="text-xl font-semibold font-poppins text-gray-900 dark:text-white mb-3 group-hover:text-white transition-colors duration-300">Learning Platform (Web + Mobile)</h3>
             <p class="text-gray-700 dark:text-gray-300 group-hover:text-gray-200 transition-colors duration-300">Academic course management and live assessments using Flutter & Laravel.</p>
             <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-30">
-              <a href="#" class="px-6 py-2 bg-white text-navy-900 font-medium rounded-full shadow-lg hover:bg-gray-100 transition-colors duration-300">View Project</a>
+              <a href="https://arkmedis.com" target="_blank" class="px-6 py-2 bg-white text-navy-900 font-medium rounded-full shadow-lg hover:bg-gray-100 transition-colors duration-300">View Project</a>
             </div>
           </div>
         </div>
@@ -644,7 +644,7 @@
             <h3 class="text-xl font-semibold font-poppins text-gray-900 dark:text-white mb-3 group-hover:text-white transition-colors duration-300">Waste Collection ERP</h3>
             <p class="text-gray-700 dark:text-gray-300 group-hover:text-gray-200 transition-colors duration-300">Enterprise waste management ERP with finance and real-time dashboards.</p>
             <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-30">
-              <a href="https://admin.sangroupuae.com" class="px-6 py-2 bg-white text-navy-900 font-medium rounded-full shadow-lg hover:bg-gray-100 transition-colors duration-300">View Project</a>
+              <a href="https://admin.sangroupuae.com" target="_blank" class="px-6 py-2 bg-white text-navy-900 font-medium rounded-full shadow-lg hover:bg-gray-100 transition-colors duration-300">View Project</a>
             </div>
           </div>
         </div>
@@ -661,7 +661,7 @@
             <h3 class="text-xl font-semibold font-poppins text-gray-900 dark:text-white mb-3 group-hover:text-white transition-colors duration-300">UTSAV Service Platform</h3>
             <p class="text-gray-700 dark:text-gray-300 group-hover:text-gray-200 transition-colors duration-300">Service booking marketplace for events across regional locations.</p>
             <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-30">
-              <a href="https://utsavplans.com" class="px-6 py-2 bg-white text-navy-900 font-medium rounded-full shadow-lg hover:bg-gray-100 transition-colors duration-300">View Project</a>
+              <a href="https://utsavplans.com" target="_blank" class="px-6 py-2 bg-white text-navy-900 font-medium rounded-full shadow-lg hover:bg-gray-100 transition-colors duration-300">View Project</a>
             </div>
           </div>
         </div>
@@ -759,7 +759,7 @@
         <div class="lg:w-1/2">
           <div class="glass rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 backdrop-blur-md">
             <h3 class="text-2xl font-semibold font-poppins text-gray-900 dark:text-white mb-6">Send Me a Message</h3>
-            <form id="contact-form" class="space-y-4">
+            <form class="space-y-4">
               <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Your Name</label>
@@ -782,7 +782,6 @@
                 Send Message
               </button>
             </form>
-            <div id="form-status" class="text-gray-500 mt-4 hidden"></div>
           </div>
         </div>
         
@@ -828,8 +827,6 @@
               </div>
             </div>
           </div>
-
-
           
           <div class="glass rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 backdrop-blur-md">
             <h3 class="text-2xl font-semibold font-poppins text-gray-900 dark:text-white mb-6">Social Media</h3>
@@ -916,9 +913,7 @@
 
   <!-- Particles.js -->
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-  <!-- <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script> -->
-
-
+  
   <!-- Main JavaScript -->
   <script>
     // Dark Mode Toggle
@@ -1131,70 +1126,66 @@
       });
     }
     
-    // Initialize EmailJS
-    (function() {
-      emailjs.init("OEND2agfpKED26IbM");
-    })();
+    // Form Handling
+    const contactForm = document.querySelector('#contact form');
 
-    // Contact Form Submission
-    const contactForm = document.getElementById('contact-form');
-    const formStatus = document.getElementById('form-status');
-    const submitButton = contactForm.querySelector('button[type="submit"]');
+    if (contactForm) {
+      const script = document.createElement('script');
+      script.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js';
+      script.async = true;
+      document.body.appendChild(script);
 
-    contactForm.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      
-      // Get form data
-      const formData = new FormData(contactForm);
-      const data = {
-        name: formData.get('name'),
-        email: formData.get('email'),
-        message: formData.get('message')
+      script.onload = () => {
+        emailjs.init("OEND2agfpKED26IbM");
       };
 
-      try {
-        // Show loading state
+      contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const submitButton = contactForm.querySelector('button[type="submit"]');
+        const originalText = submitButton.textContent;
+
+        submitButton.textContent = 'Sending...';
         submitButton.disabled = true;
-        submitButton.innerHTML = `
-          <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-          </svg>
-          Sending...
-        `;
-        formStatus.innerHTML = '<div class="text-primary-500">Sending message...</div>';
-        formStatus.classList.remove('hidden');
 
-        // Send email using EmailJS
-        await emailjs.send('service_d74trqa', 'template_admin_message', {
-          from_name: data.name,
-          from_email: data.email,
-          message: data.message,
-          to_email: 'karthikguggillapu@gmail.com'
-        });
+        const name = contactForm.querySelector('#name').value;
+        const email = contactForm.querySelector('#email').value;
+        const subject = contactForm.querySelector('#subject').value;
+        const message = contactForm.querySelector('#message').value;
 
-        // Success
-        formStatus.innerHTML = '<div class="text-green-500">Message sent successfully! I\'ll get back to you soon.</div>';
-        contactForm.reset();
-        submitButton.innerHTML = 'Message Sent!';
-        submitButton.classList.add('bg-green-500');
+        try {
+          // 1. Send admin notification
+          await emailjs.send('service_d74trqa', 'template_admin_message', {
+            from_name: name,
+            from_email: email,
+            subject,
+            message,
+            to_email: 'karthikguggillapu@gmail.com'
+          });
 
-      } catch (error) {
-        // Error
-        console.error('Form submission error:', error);
-        formStatus.innerHTML = '<div class="text-red-500">Failed to send message. Please try again later.</div>';
-        submitButton.innerHTML = 'Failed to Send';
-        submitButton.classList.add('bg-red-500');
-      }
+          // 2. Send thank you email to user
+          await emailjs.send('service_d74trqa', 'template_thankyou_user', {
+            to_name: name,
+            to_email: email
+          });
 
-      // Reset button after 3 seconds
-      setTimeout(() => {
-        submitButton.disabled = false;
-        submitButton.innerHTML = 'Send Message';
-        submitButton.classList.remove('bg-green-500', 'bg-red-500');
-        formStatus.classList.add('hidden');
-      }, 3000);
-    });
+          submitButton.textContent = 'Message Sent!';
+          submitButton.classList.add('bg-green-500');
+          contactForm.reset();
+        } catch (error) {
+          console.error("Email sending failed:", error);
+          submitButton.textContent = 'Failed to Send';
+          submitButton.classList.add('bg-red-500');
+        }
+
+        // Reset button after 3 seconds
+        setTimeout(() => {
+          submitButton.textContent = originalText;
+          submitButton.classList.remove('bg-green-500', 'bg-red-500');
+          submitButton.disabled = false;
+        }, 3000);
+      });
+    }
 
   </script>
 </body>
