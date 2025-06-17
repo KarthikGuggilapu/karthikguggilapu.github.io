@@ -52,6 +52,7 @@
             'fade-in': 'fadeIn 1s ease-in-out',
             'slide-up': 'slideUp 0.5s ease-out',
             'slide-in-right': 'slideInRight 0.5s ease-out',
+            'scroll': 'scroll 2s linear infinite'
           },
           keyframes: {
             gradient: {
@@ -74,6 +75,10 @@
               '0%': { transform: 'translateX(20px)', opacity: '0' },
               '100%': { transform: 'translateX(0)', opacity: '1' },
             },
+            scroll: {
+              '0%': { transform: 'translateY(0)' },
+              '100%': { transform: 'translateY(-10px)' }
+            }
           },
           backdropBlur: {
             xs: '2px',
@@ -220,6 +225,12 @@
         <a href="#experience" class="nav-link text-gray-700 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400 font-medium transition-colors duration-300">Experience</a>
         <a href="#projects" class="nav-link text-gray-700 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400 font-medium transition-colors duration-300">Projects</a>
         <a href="#skills" class="nav-link text-gray-700 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400 font-medium transition-colors duration-300">Skills</a>
+        <a href="assets/resume.pdf" download class="flex items-center gap-2 px-5 py-2 text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 font-medium transition-colors duration-300">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+          </svg>
+          Resume
+        </a>
         <a href="#contact" class="ml-4 px-5 py-2 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white rounded-full transition-all duration-300 shadow-md hover:shadow-lg font-medium">Contact</a>
       </nav>
       
@@ -232,77 +243,150 @@
     </div>
     
     <!-- Mobile Navigation -->
-    <div id="mobile-menu" class="fixed inset-0 z-50 bg-white/80 dark:bg-navy-900/90 backdrop-blur-lg transform translate-x-full transition-transform duration-300 ease-in-out">
-      <div class="flex flex-col h-full justify-center items-center space-y-8 p-6">
-        <button type="button" id="close-menu" aria-label="Close menu" class="absolute top-6 right-6 text-gray-700 dark:text-gray-300 focus:outline-none">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
-        <a href="#services" class="mobile-nav-link text-2xl font-medium text-gray-800 dark:text-white hover:text-primary-500 dark:hover:text-primary-400 transition-colors duration-300">Services</a>
-        <a href="#experience" class="mobile-nav-link text-2xl font-medium text-gray-800 dark:text-white hover:text-primary-500 dark:hover:text-primary-400 transition-colors duration-300">Experience</a>
-        <a href="#projects" class="mobile-nav-link text-2xl font-medium text-gray-800 dark:text-white hover:text-primary-500 dark:hover:text-primary-400 transition-colors duration-300">Projects</a>
-        <a href="#skills" class="mobile-nav-link text-2xl font-medium text-gray-800 dark:text-white hover:text-primary-500 dark:hover:text-primary-400 transition-colors duration-300">Skills</a>
-        <a href="#contact" class="mobile-nav-link px-8 py-3 bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-full shadow-lg font-medium text-xl">Contact</a>
+    <div id="mobile-menu" class="fixed inset-0 z-50 hidden">
+      <div class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+      <div class="absolute right-0 top-0 h-full w-64 bg-white dark:bg-navy-800 shadow-xl transform translate-x-full transition-transform duration-300">
+        <div class="flex flex-col h-full">
+          <div class="flex justify-end p-4">
+            <button type="button" id="close-mobile-menu" class="text-gray-700 dark:text-gray-300 focus:outline-none">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <nav class="flex-1 px-4 py-8">
+            <div class="space-y-6">
+              <a href="#services" class="block text-lg font-medium text-gray-700 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors duration-300">Services</a>
+              <a href="#experience" class="block text-lg font-medium text-gray-700 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors duration-300">Experience</a>
+              <a href="#projects" class="block text-lg font-medium text-gray-700 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors duration-300">Projects</a>
+              <a href="#skills" class="block text-lg font-medium text-gray-700 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors duration-300">Skills</a>
+              <a href="#contact" class="block text-lg font-medium text-gray-700 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors duration-300">Contact</a>
+            </div>
+          </nav>
+          <div class="p-4 border-t border-gray-200 dark:border-gray-700">
+            <div class="flex items-center justify-between">
+              <button id="theme-toggle" class="p-2 text-gray-700 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                </svg>
+              </button>
+              <a href="assets/resume.pdf" download class="flex items-center gap-2 px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg transition-all duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <span class="font-medium">Resume</span>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </header>
 
   <!-- Hero Section -->
-  <section id="hero" class="relative min-h-screen flex flex-col justify-center items-center pt-24 pb-16 overflow-hidden">
-    <div class="container mx-auto px-6 z-10">
-      <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
-        <div class="lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left" data-scroll>
-          <p class="text-primary-500 dark:text-primary-400 font-poppins mb-2 text-lg">Hello, I'm</p>
-          <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold font-poppins text-gray-900 dark:text-white mb-4 leading-tight">
-            Karthik <span class="text-gradient animate-gradient">Guggilapu</span>
-          </h1>
-          <div class="h-1 w-24 bg-primary-500 dark:bg-primary-400 mb-6"></div>
-          <p class="text-xl md:text-2xl text-gray-700 dark:text-gray-300 mb-8 max-w-xl leading-relaxed animate-fade-in">
-            <span class="font-semibold text-primary-500 dark:text-primary-400">Full Stack Developer</span> with 
-            <span class="font-bold bg-gradient-to-r from-primary-500 to-primary-600 text-transparent bg-clip-text">4+ years</span> 
-            of experience crafting elegant, efficient, and scalable solutions using 
-            <span class="font-semibold text-primary-600 dark:text-primary-300">Laravel</span>, 
-            <span class="font-semibold text-primary-600 dark:text-primary-300">Flutter</span>, and 
-            <span class="font-semibold text-primary-600 dark:text-primary-300">Next.js</span>.
+  <section id="hero" class="relative min-h-screen max-w-full px-12 flex flex-col justify-center items-center pt-24 pb-16 overflow-hidden bg-white dark:bg-navy-900">
+    <!-- Geometric Background Elements -->
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute top-0 left-0 w-96 h-96 bg-primary-500/10 dark:bg-primary-500/20 rounded-full filter blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+      <div class="absolute bottom-0 right-0 w-96 h-96 bg-primary-600/10 dark:bg-primary-600/20 rounded-full filter blur-3xl translate-x-1/2 translate-y-1/2"></div>
+      <div class="absolute top-1/2 left-1/2 w-64 h-64 bg-primary-400/10 dark:bg-primary-400/20 rounded-full filter blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container mx-auto z-10">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <!-- Left Column -->
+        <div class="space-y-8" data-scroll>
+          <div class="space-y-4">
+            <div class="inline-block">
+              <span class="px-4 py-2 bg-primary-50 dark:bg-navy-800 rounded-lg text-primary-600 dark:text-primary-400 font-medium text-sm tracking-wider uppercase">
+                Welcome to my portfolio
+              </span>
+            </div>
+            <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white leading-tight">
+              Hi, I'm <span class="relative">
+                Karthik
+                <!-- <span class="absolute -bottom-2 left-0 w-full h-2 bg-primary-500/30 dark:bg-primary-500/40 rounded-full"></span>
+                </span> -->
+              <br/>
+              <span class="text-gradient bg-clip-text text-transparent bg-gradient-to-r from-primary-500 via-primary-600 to-primary-700">
+                Guggilapu
+              </span>
+            </h1>
+          </div>
+
+          <p class="text-xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-xl">
+            A <span class="font-semibold text-primary-600 dark:text-primary-400">Full Stack Developer</span> with 
+            <span class="font-bold text-primary-600 dark:text-primary-400">4 years</span> of experience in 
+            crafting elegant solutions using modern technologies.
           </p>
-          <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
-            <a href="#contact" class="px-8 py-3 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white rounded-full transition-all duration-300 shadow-md hover:shadow-lg font-medium text-lg">
-              Hire Me
+
+          <div class="flex flex-wrap gap-6">
+            <a href="#contact" class="group relative px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white rounded-lg transition-all duration-300 overflow-hidden">
+              <span class="relative z-10 flex items-center gap-2 font-medium">
+                Get in Touch
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </span>
+              <div class="absolute inset-0 bg-gradient-to-r from-primary-500 to-primary-600 opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </a>
-            <a href="#projects" class="px-8 py-3 border-2 border-primary-500 dark:border-primary-400 text-primary-600 dark:text-primary-400 hover:bg-primary-50 dark:hover:bg-navy-800 rounded-full transition-all duration-300 font-medium text-lg">
-              Portfolio
+            <a href="#projects" class="group px-8 py-4 border-2 border-primary-500/20 hover:border-primary-500 text-primary-600 dark:text-primary-400 rounded-lg transition-all duration-300">
+              <span class="flex items-center gap-2 font-medium">
+                View Projects
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </span>
             </a>
           </div>
+
+          <!-- Tech Stack -->
+          <div class="pt-8">
+            <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">Tech Stack</p>
+            <div class="flex flex-wrap gap-4">
+              <span class="px-4 py-2 bg-gray-50 dark:bg-navy-800 rounded-lg text-gray-700 dark:text-gray-300 text-sm font-medium">Laravel</span>
+              <span class="px-4 py-2 bg-gray-50 dark:bg-navy-800 rounded-lg text-gray-700 dark:text-gray-300 text-sm font-medium">Flutter</span>
+              <span class="px-4 py-2 bg-gray-50 dark:bg-navy-800 rounded-lg text-gray-700 dark:text-gray-300 text-sm font-medium">Next.js</span>
+            </div>
+          </div>
         </div>
-        
-        <div class="lg:w-1/2 flex justify-center lg:justify-end" data-scroll>
-          <div class="relative">
-            <div class="absolute inset-0 bg-gradient-to-r from-primary-500/20 to-navy-500/20 rounded-full filter blur-3xl opacity-70 animate-pulse"></div>
-            <div class="relative w-72 h-72 sm:w-80 sm:h-80 md:w-120 md:h-120 rounded-full overflow-hidden border-8 border-white dark:border-navy-800 shadow-2xl animate-float">
+
+        <!-- Right Column -->
+        <div class="relative" data-scroll>
+          <div class="relative w-full aspect-square max-w-lg mx-auto">
+            <!-- Decorative Elements -->
+            <div class="absolute inset-0 bg-gradient-to-br from-primary-500/20 to-primary-600/20 rounded-2xl transform rotate-6"></div>
+            <div class="absolute inset-0 bg-gradient-to-br from-primary-400/20 to-primary-500/20 rounded-2xl transform -rotate-6"></div>
+            
+            <!-- Main Image Container -->
+            <div class="relative w-full h-full rounded-2xl overflow-hidden border-8 border-white dark:border-navy-800 shadow-2xl">
               <img 
                 src="assets/hero-mobile-image.jpg" 
                 alt="Karthik Guggilapu" 
-                class="w-full h-full object-cover object-center"
+                class="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-500"
               >
             </div>
-            <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-white dark:bg-navy-800 rounded-full flex items-center justify-center shadow-lg">
+
+            <!-- Experience Badge -->
+            <div class="absolute -bottom-6 -right-6 bg-white dark:bg-navy-800 rounded-xl p-4 shadow-xl transform hover:scale-105 transition-transform duration-300">
               <div class="text-center">
-                <div class="text-3xl font-bold text-primary-500 dark:text-primary-400">4+</div>
-                <div class="text-sm text-gray-600 dark:text-gray-400">Years Exp.</div>
+                <div class="text-3xl font-bold bg-gradient-to-r from-primary-500 to-primary-600 text-transparent bg-clip-text">4</div>
+                <div class="text-sm text-gray-600 dark:text-gray-400 font-medium">Years of Experience</div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    
-    <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-      <a href="#services" class="flex flex-col items-center">
-        <span class="text-gray-600 dark:text-gray-400 text-sm mb-2">Scroll Down</span>
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary-500 dark:text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-        </svg>
+
+    <!-- Scroll Indicator -->
+    <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2">
+      <a href="#services" class="group flex flex-col items-center">
+        <span class="text-sm text-gray-500 dark:text-gray-400 group-hover:text-primary-500 transition-colors">Scroll Down</span>
+        <div class="w-6 h-10 border-2 border-gray-300 dark:border-gray-600 rounded-full p-1 mt-2">
+          <div class="w-1.5 h-1.5 bg-primary-500 rounded-full mx-auto animate-scroll"></div>
+        </div>
       </a>
     </div>
   </section>
@@ -826,21 +910,38 @@
     
     // Mobile Menu Toggle
     const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const closeMenuButton = document.getElementById('close-menu');
+    const closeMobileMenu = document.getElementById('close-mobile-menu');
     const mobileMenu = document.getElementById('mobile-menu');
-    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
-    
-    mobileMenuButton.addEventListener('click', () => {
-      mobileMenu.classList.remove('translate-x-full');
+    const mobileMenuContent = mobileMenu.querySelector('div > div');
+
+    function toggleMobileMenu() {
+      mobileMenu.classList.toggle('hidden');
+      if (!mobileMenu.classList.contains('hidden')) {
+        // Show menu
+        setTimeout(() => {
+          mobileMenuContent.classList.remove('translate-x-full');
+        }, 10);
+      } else {
+        // Hide menu
+        mobileMenuContent.classList.add('translate-x-full');
+      }
+    }
+
+    mobileMenuButton.addEventListener('click', toggleMobileMenu);
+    closeMobileMenu.addEventListener('click', toggleMobileMenu);
+
+    // Close mobile menu when clicking outside
+    mobileMenu.addEventListener('click', (e) => {
+      if (e.target === mobileMenu) {
+        toggleMobileMenu();
+      }
     });
-    
-    closeMenuButton.addEventListener('click', () => {
-      mobileMenu.classList.add('translate-x-full');
-    });
-    
-    mobileNavLinks.forEach(link => {
+
+    // Close mobile menu when clicking on a link
+    const mobileLinks = mobileMenu.querySelectorAll('nav a');
+    mobileLinks.forEach(link => {
       link.addEventListener('click', () => {
-        mobileMenu.classList.add('translate-x-full');
+        toggleMobileMenu();
       });
     });
     
@@ -1003,35 +1104,66 @@
     }
     
     // Form Handling
-    const contactForm = document.querySelector('form');
+    const contactForm = document.querySelector('#contact form');
+
     if (contactForm) {
-      contactForm.addEventListener('submit', (e) => {
+      const script = document.createElement('script');
+      script.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js';
+      script.async = true;
+      document.body.appendChild(script);
+
+      script.onload = () => {
+        emailjs.init("OEND2agfpKED26IbM");
+      };
+
+      contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
-        
-        // In a real application, you would send the form data to a server
-        // For this demo, we'll just show a success message
-        
+
         const submitButton = contactForm.querySelector('button[type="submit"]');
         const originalText = submitButton.textContent;
-        
+
         submitButton.textContent = 'Sending...';
-        
-        // Simulate form submission
-        setTimeout(() => {
+        submitButton.disabled = true;
+
+        const name = contactForm.querySelector('#name').value;
+        const email = contactForm.querySelector('#email').value;
+        const subject = contactForm.querySelector('#subject').value;
+        const message = contactForm.querySelector('#message').value;
+
+        try {
+          // 1. Send admin notification
+          await emailjs.send('service_d74trqa', 'template_admin_message', {
+            from_name: name,
+            from_email: email,
+            subject,
+            message,
+            to_email: 'karthikguggillapu@gmail.com'
+          });
+
+          // 2. Send thank you email to user
+          await emailjs.send('service_d74trqa', 'template_thankyou_user', {
+            to_name: name,
+            to_email: email
+          });
+
           submitButton.textContent = 'Message Sent!';
           submitButton.classList.add('bg-green-500');
-          
-          // Reset form
           contactForm.reset();
-          
-          // Reset button after 3 seconds
-          setTimeout(() => {
-            submitButton.textContent = originalText;
-            submitButton.classList.remove('bg-green-500');
-          }, 3000);
-        }, 1500);
+        } catch (error) {
+          console.error("Email sending failed:", error);
+          submitButton.textContent = 'Failed to Send';
+          submitButton.classList.add('bg-red-500');
+        }
+
+        // Reset button after 3 seconds
+        setTimeout(() => {
+          submitButton.textContent = originalText;
+          submitButton.classList.remove('bg-green-500', 'bg-red-500');
+          submitButton.disabled = false;
+        }, 3000);
       });
     }
+
   </script>
 </body>
 </html>
