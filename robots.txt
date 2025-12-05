@@ -1,0 +1,16 @@
+# robots.txt for Karthik Guggilapu Portfolio
+# https://karthikguggilapu.github.io/
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://karthikguggilapu.github.io/sitemap.xml
+
+# Crawl-delay (optional - be gentle with the server)
+Crawl-delay: 10
+
+# Disallow any admin or private areas (if applicable)
+# Disallow: /admin/
+# Disallow: /private/
+
