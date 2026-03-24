@@ -4,20 +4,27 @@
     font-style: normal;
 }
 
-
 :root {
-    /* Colors */
-    --primary : #00163E;
-    --secondary : #fff;
-    --bg-color : #F1FBFE;
-    --orange : #FF5D17;
-    --red : #ff0000;
-    --black : #000;
-    --text-color : #5C5C5C;
-    --text-bg : #92a5b3;
-    --blue : #0F3884;
-
-    /* Font Family */
-    --inter : 'Inter', sans-serif; 
-    --georgia : 'Georgia', serif;
+    --primary: #ff5722;
+    --primary-dark: #c43000;
+    --accent: #0ba5ec;
+    --navy: #0f172a;
+    --navy-soft: #16213f;
+    --surface: rgba(255, 255, 255, 0.72);
+    --surface-strong: rgba(255, 255, 255, 0.9);
+    --surface-dark: rgba(15, 23, 42, 0.72);
+    --surface-border: rgba(148, 163, 184, 0.18);
+    --text-main: #0f172a;
+    --text-muted: #475569;
+    --text-soft: #64748b;
+    --bg-base: #f8fafc;
+    --bg-tint: #fff7f3;
+    --white: #ffffff;
+    --shadow-soft: 0 20px 50px rgba(15, 23, 42, 0.08);
+    --shadow-strong: 0 24px 80px rgba(15, 23, 42, 0.16);
+    --radius-xl: 24px;
+    --radius-lg: 18px;
+    --max-width: 1200px;
+    --inter: 'Inter', sans-serif;
+    --poppins: 'Poppins', sans-serif;
 }
