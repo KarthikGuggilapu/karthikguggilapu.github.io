@@ -2,39 +2,209 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://karthikguggilapu.github.io/</loc>
-    <lastmod>2026-03-25</lastmod>
+    <lastmod>2026-04-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://karthikguggilapu.github.io/#about</loc>
-    <lastmod>2026-03-25</lastmod>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://karthikguggilapu.github.io/#whatido</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://karthikguggilapu.github.io/#services</loc>
+    <lastmod>2026-04-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://karthikguggilapu.github.io/#experience</loc>
-    <lastmod>2026-03-25</lastmod>
+    <lastmod>2026-04-25</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://karthikguggilapu.github.io/#projects</loc>
-    <lastmod>2026-03-25</lastmod>
+    <lastmod>2026-04-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://karthikguggilapu.github.io/#skills</loc>
-    <lastmod>2026-03-25</lastmod>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://karthikguggilapu.github.io/#education</loc>
+    <lastmod>2026-04-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://karthikguggilapu.github.io/#contact</loc>
-    <lastmod>2026-03-25</lastmod>
+    <lastmod>2026-04-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://karthikguggilapu.github.io/aboutus.html</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://karthikguggilapu.github.io/assets/resume.pdf</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://karthikguggilapu.github.io/assets/GK-1resume.pdf</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://karthikguggilapu.github.io/assets/GK-2resume.pdf</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://karthikguggilapu.github.io/assets/Karthik%20Guggilapu%20Full%20CV.pdf</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://karthikguggilapu.github.io/assets/gk_resume.pdf</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://karthikguggilapu.github.io/assets/gk_resume1.pdf</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://karthikguggilapu.github.io/assets/hero_image.png</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://karthikguggilapu.github.io/assets/hero_image_1.png</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://karthikguggilapu.github.io/assets/hero_image_2.png</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://karthikguggilapu.github.io/assets/hero-mobile-image.jpg</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://karthikguggilapu.github.io/assets/gk_image.png</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://karthikguggilapu.github.io/assets/gk_image.jpg</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://karthikguggilapu.github.io/assets/icon.png</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://karthikguggilapu.github.io/assets/alnajma.png</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://karthikguggilapu.github.io/assets/codegarage.png</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://karthikguggilapu.github.io/assets/utsavplans.png</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://karthikguggilapu.github.io/robots.txt</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://karthikguggilapu.github.io/manifest.webmanifest</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
 </urlset>
 
+  <url>
+    <loc>https://karthikguggilapu.github.io/blog.html</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://karthikguggilapu.github.io/blog.html</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://karthikguggilapu.github.io/blog/laravel-microservices.html</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://karthikguggilapu.github.io/blog/nextjs-ssr-vs-ssg.html</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://karthikguggilapu.github.io/blog/flutter-tips-tricks.html</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://karthikguggilapu.github.io/blog/ai-laravel-integration.html</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+</urlset>
