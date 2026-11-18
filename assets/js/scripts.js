@@ -222,7 +222,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     from_email: email,
                     subject,
                     message,
-                    to_email: 'karthikguggillapu@gmail.com'
+                    to_email: 'karthikguggilapu@gmail.com'
                 });
 
                 await emailjs.send('service_d74trqa', 'template_thankyou_user', {

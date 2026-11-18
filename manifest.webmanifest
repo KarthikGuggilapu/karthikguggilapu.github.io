@@ -1,7 +1,7 @@
 {
   "name": "Karthik Guggilapu - Full Stack Developer",
-  "short_name": "Karthik G",
-  "description": "Full Stack Developer with 4+ years of experience in Laravel, Flutter, Next.js, and AI tools.",
+  "short_name": "Karthik Guggilapu",
+  "description": "Full Stack Developer with 6 years of experience in Laravel, Flutter, Next.js, and AI tools.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0F172A",
@@ -21,7 +21,10 @@
       "purpose": "any maskable"
     }
   ],
-  "categories": ["portfolio", "developer", "business"],
+  "categories": [
+    "portfolio",
+    "developer",
+    "business"
+  ],
   "lang": "en-US"
 }
-
